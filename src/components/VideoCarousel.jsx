@@ -1,17 +1,15 @@
-
-
 // VideoCarousel.jsx
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect, useState, useCallback, useRef } from 'react';
 
-import hero1 from '../assets/video/hero1.mp4';   // ajusta la ruta/carpeta si es necesario
+import hero1 from '../assets/video/hero1.mp4';
 import hero2 from '../assets/video/hero2.mp4';
 import hero3 from '../assets/video/hero3.mp4';
 
 const videos = [
-  { src: hero1, title: 'Contadora senior' },
-  { src: hero2, title: 'Consultoria' },
-  { src: hero3, title: 'Auditor' },
+  { src: hero1, title: 'RIMPE', text: "Regimen Simplificado para Emprendedores y Negocios Populares" },
+  { src: hero2, title: 'Consultoria', text: "Auditorias Externas. Asesoramiento Financiero" },
+  { src: hero3, title: 'Tributacion inteligente', text: "Contador Online 24/7 y Presencial Previo Agenda" },
 ];
 
 export default function VideoCarousel() {
@@ -42,12 +40,11 @@ export default function VideoCarousel() {
     if (emblaApi) setScrollSnaps(emblaApi.scrollSnapList());
   }, [emblaApi]);
 
-  // Manejar reproducción/pausa de videos basado en selectedIndex
   useEffect(() => {
     videoRefs.current.forEach((video, index) => {
       if (video) {
         if (index === selectedIndex) {
-          video.play().catch(() => {}); // Ignorar errores si autoplay falla
+          video.play().catch(() => {});
         } else {
           video.pause();
         }
@@ -62,7 +59,6 @@ export default function VideoCarousel() {
 
   return (
     <div className="relative mx-auto w-full max-w-5xl lg:pt-20 pt-15">
-      {/* Contenedor principal del carrusel */}
       <div className="embla overflow-hidden shadow-2xl" ref={emblaRef}>
         <div className="embla__container flex touch-pan-y">
           {videos.map((video, index) => (
@@ -78,15 +74,27 @@ export default function VideoCarousel() {
                   muted={true}
                   autoPlay
                   playsInline
-                  onEnded={() => emblaApi?.scrollNext()}  // Cambia al siguiente video cuando termine
+                  onEnded={() => emblaApi?.scrollNext()}
                 />
+
+                {/* Overlay con fondo oscuro semi-transparente + texto centrado */}
+                <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-6 sm:px-12">
+                  {video.title && (
+                    <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-6 drop-shadow-lg">
+                      {video.title}
+                    </h2>
+                  )}
+                  <p className="text-lg sm:text-2xl md:text-3xl font-semibold text-white drop-shadow-md max-w-3xl">
+                    {video.text}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Botones de navegación */}
+      {/* Botones de navegación (sin cambios) */}
       <button
         className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white hover:bg-black/70 transition sm:left-8"
         onClick={() => emblaApi?.scrollPrev()}
