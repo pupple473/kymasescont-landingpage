@@ -9,22 +9,24 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-14 sm:h-16 md:-20">
                     <div className="flex items-center space-x-1 group cursor-pointer">
-                        <div>
+                        <a href="#home">
                             <img 
                                 src="/logo.png" 
                                 alt="KyM AsesCont" 
                                 className="w-6 h-6 sm:w-8 sm:h-8"
                             />
-                        </div>
-                        <span className="text-lg sm:text-xl md:text-2xl font-medium">
-                            <span className="text-white">KyM</span>
-                            <span className="text-blue-400">Asescont</span>
-                        </span>
+                        </a>
+                        <a
+                            href="#home" 
+                            className="text-lg sm:text-xl md:text-2xl font-medium">
+                                <span className="text-white">KyM</span>
+                                <span className="text-blue-400">Asescont</span>
+                        </a>
                     </div>
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-                        <a href="#aboutus" className="text-gray-300 hover:text-white text-sm lg:text-base" >
-                            Nosotros
+                        <a href="#featuresection" className="text-gray-300 hover:text-white text-sm lg:text-base" >
+                            Servicios
                         </a>
                         <a href="#contactus" className="text-gray-300 hover:text-white text-sm lg:text-base">
                             Contactanos
@@ -51,10 +53,16 @@ export default function Navbar() {
                 <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 slide-in-from-top animate-in duration-300">
                     <div className='px-4 py-4 sm:py-6 space-y-3 sm:space-y-4'>
                         <a 
-                            href="#aboutus" 
+                            href="#home" 
                             className="block text-gray-300 hover:text-white text-sm lg:text-base" 
                             onClick={() => setMobileMenuIsOpen(false)}>
-                            Nosotros
+                            Inicio
+                        </a>
+                        <a 
+                            href="#featuresection" 
+                            className="block text-gray-300 hover:text-white text-sm lg:text-base" 
+                            onClick={() => setMobileMenuIsOpen(false)}>
+                            Servicios
                         </a>
                         <a 
                             href="#contactus" 

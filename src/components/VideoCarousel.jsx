@@ -58,7 +58,7 @@ export default function VideoCarousel() {
   );
 
   return (
-    <div className="relative mx-auto w-full max-w-5xl lg:pt-20 pt-15">
+    <div id='home' className="relative mx-auto w-full max-w-5xl lg:pt-20 pt-15">
       <div className="embla overflow-hidden shadow-2xl" ref={emblaRef}>
         <div className="embla__container flex touch-pan-y">
           {videos.map((video, index) => (

@@ -4,6 +4,7 @@ import Contactus from "./components/Contactus";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import VideoCarousel from "./components/VideoCarousel";
+import FeatureSection from "./components/FeatureSection";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
       <Navbar />
       <VideoCarousel/>
+      <FeatureSection/>
       <Aboutus />
       <Contactus />
       <Testimonials />
