@@ -5,6 +5,7 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import VideoCarousel from "./components/VideoCarousel";
 import FeatureSection from "./components/FeatureSection";
+import FloatingWhatsapp from "./components/FloatingWhatsapp";
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
       <Contactus />
       <Testimonials />
       <Footer />
+
+      <FloatingWhatsapp />
     </div>
   )
 }

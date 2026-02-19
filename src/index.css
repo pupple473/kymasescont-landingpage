@@ -55,3 +55,9 @@
     @apply bg-blue-600 scale-125 shadow-md;
   }
 }
+/* Custom Floating Button */
+.whatsapp-custom-wrapper img {
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);  /* opcional: sombra sutil */
+}
