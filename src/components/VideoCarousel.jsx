@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback, useRef } from 'react';
 import hero1 from '../assets/video/hero1.mp4';
 import hero2 from '../assets/video/hero2.mp4';
 import hero3 from '../assets/video/hero3.mp4';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const videos = [
   { src: hero1, title: 'RIMPE', text: "Regimen Simplificado para Emprendedores y Negocios Populares" },
@@ -94,37 +95,40 @@ export default function VideoCarousel() {
         </div>
       </div>
 
-      {/* Botones de navegación (sin cambios) */}
+      {/* Botones de navegación */}
       <button
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white hover:bg-black/70 transition sm:left-8"
+        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/70 p-3 text-blue-800 hover:bg-white/80 rounded-full shadow-sm transition sm:left-6"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Anterior"
       >
-        ←
+        <ChevronLeft className='w-6 h-6 text-blue-800'/>
       </button>
       <button
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white hover:bg-black/70 transition sm:right-8"
+        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/70 p-3 text-blue-800 hover:bg-white/80 rounded-full shadow-sm transition sm:right-6"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Siguiente"
       >
-        →
+        <ChevronRight className='w-6 h-6 text-blue-800'/>
       </button>
 
       {/* Indicadores (puntos) */}
-      <div className="mt-4 flex justify-center gap-3">
+      
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
-            className={`h-3 w-3 rounded-full transition-all ${
+            className={`rounded-full transition-all duration-300 ${
               index === selectedIndex
-                ? 'bg-blue-600 scale-125'
-                : 'bg-gray-400 hover:bg-gray-300'
+                ? 'bg-blue-600 w-6 h-2.5'
+                : 'bg-white/50 hover:bg-white/80 w-2.5 h-2.5'
             }`}
             onClick={() => scrollTo(index)}
             aria-label={`Ir al slide ${index + 1}`}
           />
         ))}
       </div>
+
+
     </div>
   );
 }
