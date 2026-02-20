@@ -2,7 +2,13 @@ import { Linkedin, Instagram, MessageCircleMore } from "lucide-react";
 import EmailButton from "../components/EmailButton.jsx";
 
 const footerLinks = {
-  Secciones: ["Inicio", "Servicios", "Contacto", "Clientes", "Nosotros"],
+  Secciones: [
+    { label: "Inicio", href: "#home" },
+    { label: "Servicios", href: "#featuresection" },
+    { label: "Contacto", href: "#contactus" },
+    { label: "Clientes", href: "#testimonials" },
+    { label: "Nosotros", href: "#aboutus" },
+  ],
 };
 
 export default function Footer() {
@@ -39,12 +45,12 @@ export default function Footer() {
               </h3>
               <ul className="flex flex-wrap justify-center lg:justify-end gap-x-6 sm:gap-x-8 gap-y-3 text-gray-400">
                 {footerLinks.Secciones.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="hover:text-white transition-colors text-sm sm:text-base"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -56,6 +62,18 @@ export default function Footer() {
                 <h3 className="font-semibold text-white mb-4 text-base sm:text-lg text-center lg:text-right">
                     Contacto
                 </h3>
+                <div className="flex justify-center lg:justify-end">
+                  <p className="text-gray-400 mb-4 text-sm sm:text-base text-center lg:text-right pr-4">
+                    Quevedo, Ecuador 
+                  </p>
+                  <p className="text-gray-400 mb-4 text-sm sm:text-base text-center lg:text-right">
+                    Guayaquil, Ecuador
+                  </p>    
+                </div>
+         
+                <p className="text-gray-400 mb-6 text-sm sm:text-base text-center lg:text-right">
+                  Teléfonos: <a href="tel:+593998893228" className="hover:text-white transition-colors">+593 99 889 3228</a>, <a href="tel:+593989287333" className="hover:text-white transition-colors">+593 98 828 7333</a>, <a href="tel:+593987301254" className="hover:text-white transition-colors">+593 98 730 1254</a>
+                </p>
             </div>
             <div className="flex justify-center lg:justify-end gap-4 sm:gap-5">
                 <a
@@ -97,7 +115,7 @@ Saludos cordiales,
         {/* Copyright centrado */}
         <div className="pt-8 border-t border-slate-800 text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 ASESCONT M&S ASESMENSE S.A.S. Todos los Derechos Reservados.
+            © 2026 ASESCONT M&S ASESMENSE S.A.S. Todos los Derechos Reservados.
           </p>
         </div>
       </div>
