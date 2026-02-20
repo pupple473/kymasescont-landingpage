@@ -20,8 +20,8 @@ export default function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10"
               />
               <span className="text-xl sm:text-2xl font-bold">
-                <span className="text-white">KyM</span>
-                <span className="text-blue-400">Asescont</span>
+                <span className="text-white">Asescont</span>
+                <span className="text-blue-400">MyS</span>
               </span>
             </div>
 
@@ -74,12 +74,18 @@ export default function Footer() {
                     className="p-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-200"
                     aria-label="WhatsApp"
                 >
-                    <MessageCircleMore className="w-6 h-6" />  {/* o usa el ícono de WhatsApp si tienes uno */}
+                    <MessageCircleMore className="w-6 h-6" />
                 </a>
                 <EmailButton
                     email="asescontms@gmail.com"
                     subject="Consulta desde el sitio web"
-                    body="Hola equipo!%0D%0AEstoy interesado en saber más sobre sus servicios...%0D%0ASaludos,"
+                      body={`Hola equipo!
+
+Estoy interesado en saber más sobre sus servicios.
+¿Podrían enviarme información sobre ...?
+
+Saludos cordiales,
+[Tu nombre]`} 
                     className="p-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-200"
                     iconClassName="w-6 h-6"
                     aria-label="Email"

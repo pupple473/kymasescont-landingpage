@@ -19,8 +19,8 @@ export default function Navbar() {
                         <a
                             href="#home" 
                             className="text-lg sm:text-xl md:text-2xl font-medium">
-                                <span className="text-white">KyM</span>
-                                <span className="text-blue-400">Asescont</span>
+                                <span className="text-white">Asescont</span>
+                                <span className="text-blue-400">MyS</span>
                         </a>
                     </div>
                     {/* Navigation Links */}
