@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const videos = [
   { src: hero1, title: 'RIMPE', text: "Regimen Simplificado para Emprendedores y Negocios Populares" },
   { src: hero2, title: 'Consultoria', text: "Auditorias Externas. Asesoramiento Financiero" },
-  { src: hero3, title: 'Tributacion inteligente', text: "Contador Online 24/7 y Presencial Previo Agenda" },
+  { src: hero3, title: 'Tributacion Inteligente', text: "Contador Online 24/7 y Presencial Previo Agenda" },
 ];
 
 export default function VideoCarousel() {
