@@ -72,14 +72,14 @@ export default function Footer() {
                 </div>
          
                 <p className="text-gray-400 mb-6 text-sm sm:text-base text-center lg:text-right">
-                  Teléfonos: <a href="tel:+593998893228" className="hover:text-white transition-colors">+593 99 889 3228</a>, <a href="tel:+593989287333" className="hover:text-white transition-colors">+593 98 828 7333</a>, <a href="tel:+593987301254" className="hover:text-white transition-colors">+593 98 730 1254</a>
+                  Teléfonos: <a href="tel:+593998893228" className="hover:text-white transition-colors">+593 99 889 3228</a>   {/*  <a href="tel:+593989287333" className="hover:text-white transition-colors">+593 98 828 7333</a>, <a href="tel:+593987301254" className="hover:text-white transition-colors">+593 98 730 1254</a> */}
                 </p>
             </div>
             <div className="flex justify-center lg:justify-end gap-4 sm:gap-5">
                 <a
                     href="https://www.instagram.com/asescontmys.ec?igsh=MXEwdXR4eGN4MTV3bQ=="
-                    target="_blank"                    // ← abre en nueva pestaña
-                    rel="noopener noreferrer"          // ← seguridad recomendada
+                    target="_blank"                    
+                    rel="noopener noreferrer"          
                     className="p-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors duration-200"
                     aria-label="Instagram"
                 >

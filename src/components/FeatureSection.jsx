@@ -1,8 +1,10 @@
 import { features } from "../constants/index";
+import ContactButton from "../components/ContactButton";
+
 
 const FeatureSection = () => {
   return (
-    <div 
+    <section 
       id="featuresection" 
       className="relative mt-20 border-b border-neutral-800 min-h-[800px] px-10 lg:px-20">
         <div className="text-center">
@@ -15,6 +17,9 @@ const FeatureSection = () => {
               y PYMES
             </span>
           </h2>
+          
+                <ContactButton />
+
         </div>
       <div className="flex flex-wrap mt-10 lg:mt-20 px-2 justify-content-space-around">
         {features.map((feature, index) => (
@@ -25,8 +30,8 @@ const FeatureSection = () => {
                 <div className="flex h-10 w-full  text-blue-500 justify-center items-center">
                   {feature.icon}
                 </div>
-                <h5 className="mt-1 mb-6 text-xl text-center">{feature.text}</h5>
-                <p className="text-md p-2 mb-20 text-neutral-500">
+                <h5 className="mt-1 mb-6 text-lg lg:text-xl text-center">{feature.text}</h5>
+                <p className="text-sm lg:text-md p-2 mb-20 text-neutral-500">
                   {feature.description}
                 </p>
               </div>
@@ -34,7 +39,7 @@ const FeatureSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

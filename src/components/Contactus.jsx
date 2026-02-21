@@ -73,10 +73,10 @@ export default function Contactus() {
         </div>
 
         {/* Form Container */}
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto ">
           <form 
             onSubmit={handleSubmit}
-            className="bg-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10"
+            className="bg-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10 m-4"
           >
             {/* Name Field */}
             <div className="mb-6">
